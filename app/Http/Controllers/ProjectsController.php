@@ -10,7 +10,13 @@ class ProjectsController extends Controller
     {
         $request->user()->projects()->create([
             'name'=> $request->name,
-            'thumbnail'=> $request->thumbnail
+            'thumbnail'=> $this->thumb($request)
         ]);
+    }
+
+    public function thumb($request)
+    {
+        return $request->hasFile('thumbnail') ? $request->thumbnail
+            ->store('public/thumbs') : null;
     }
 }
