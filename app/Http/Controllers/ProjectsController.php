@@ -6,13 +6,11 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
-    public function __construct()
+    public function store(Request $request)
     {
-        $this->middleware('auth');
-    }
-
-    public function store()
-    {
-        return 'good';
+        $request->user()->projects()->create([
+            'name'=> $request->name,
+            'thumbnail'=> $request->thumbnail
+        ]);
     }
 }
