@@ -13,13 +13,23 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            {!! Form::open(['route' => 'projects.store', 'method' => 'post', 'files' => 'true']) !!}
+                <div class="modal-body">
+                   <div class="form-group">
+                       {!! Form::label('name', 'Project Name') !!}
+                       {!! Form::text('name', '', ['class' => 'form-control']) !!}
+                   </div>
+
+                    <div class="form-group">
+                       {!! Form::label('thumbnail', 'Project Pic') !!}
+                       {!! Form::file('thumbnail', ['class' => 'form-control-file']) !!}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    {!! Form::submit('Submit', ['class' => 'btn btn-success']) !!}
+                </div>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>
