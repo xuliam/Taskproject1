@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateProjectRequest;
+use App\Repositories\ProjectRepository;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
-    public function store(Request $request)
+    protected $repo;
+
+    public function __construct(ProjectRepository $repo)
     {
-        $request->user()->projects()->create([
-            'name'=> $request->name,
-            'thumbnail'=> $this->thumb($request)
-        ]);
+        $this->repo = $repo;
     }
 
-    public function thumb($request)
+    public function store(CreateProjectRequest $request)
     {
-        return $request->hasFile('thumbnail') ? $request->thumbnail
-            ->store('public/thumbs') : null;
+        $this->repo->create($request);
     }
+
 }

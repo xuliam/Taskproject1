@@ -26,6 +26,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    @include('errors._errors')
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     {!! Form::submit('Submit', ['class' => 'btn btn-success']) !!}
                 </div>
