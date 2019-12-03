@@ -16,8 +16,13 @@ class ProjectRepository
 
     public function thumb($request)
     {
-        return $request->hasFile('thumbnail') ? $request->thumbnail
-            ->store('public/thumbs') : null;
+        if($request->hasFile('thumbnail')){
+            $thumb= $request->thumbnail;
+            $name= $thumb->hashName();
+            $thumb->storeAs('public/thumbs', $name);
+            return $name;
+        }
+
     }
 
 }
