@@ -19,3 +19,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('projects', 'ProjectsController@store')->name('projects.store');
 Route::delete('projects/{mingzi}', 'ProjectsController@destroy')->name('projects.destroy');
+Route::patch('projects/{shide}', 'ProjectsController@update')->name('projects.update');

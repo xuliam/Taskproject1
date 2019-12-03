@@ -5,7 +5,13 @@
             <li>
                @include('projects._cardDelete')
             </li>
-            <li><i class="fa fa-btn fa-cog"></i></li>
+                <!-- Button trigger modal -->
+            <li>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editProjectModal-{{$project->id}}">
+                    <i class="fa fa-btn fa-cog"></i>
+                </button>
+            </li>
+
         </ul>
 
         <a href="projects/{{$project->id}}">
@@ -15,4 +21,5 @@
             </div>
         </a>
     </div>
+        @include('projects._CardEdite')
 </div>

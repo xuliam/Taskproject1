@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Repositories\ProjectRepository;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,12 @@ class ProjectsController extends Controller
     public function destroy($id)
     {
         $this->repo->delete($id);
+        return back();
+    }
+
+    public function update($id, UpdateProjectRequest $request)
+    {
+        $this->repo->update($id, $request);
         return back();
     }
 }

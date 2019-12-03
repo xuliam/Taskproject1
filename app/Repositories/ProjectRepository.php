@@ -35,4 +35,16 @@ class ProjectRepository
         $project = $this->find($id);
         $project->delete();
     }
+
+    public function update($id, $request)
+    {
+        $project = $this->find($id);
+
+        $project->name = $request->name;
+        if ($request->hasFile('thumbnail')){
+            $project->thumbnail = $this->thumb($request);
+        }
+
+        $project->save();
+    }
 }
