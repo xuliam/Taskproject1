@@ -47,4 +47,9 @@ class ProjectRepository
 
         $project->save();
     }
+
+    public function show($id)
+    {
+        return $this->find($id);
+    }
 }

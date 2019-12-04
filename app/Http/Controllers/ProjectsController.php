@@ -33,4 +33,10 @@ class ProjectsController extends Controller
         $this->repo->update($id, $request);
         return back();
     }
+
+    public function show($id)
+    {
+        $this->repo->show($id);
+        return view('projects._show');
+    }
 }
