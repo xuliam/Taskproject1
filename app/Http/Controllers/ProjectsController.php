@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
+use App\Project;
 use App\Repositories\ProjectRepository;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,17 @@ class ProjectsController extends Controller
         return back();
     }
 
-    public function show($id)
+    public function show(Project $ok)
     {
-        $this->repo->show($id);
-        return view('projects._show');
+        $todos=$this->repo->todos($ok);
+        $dones=$this->repo->dones($ok);
+       // dd($todos);
+
+        //$todos = $this->repo->
+         //$mingzi =$this->repo->show($id);
+        return view('projects._show', compact('ok','todos','dones'));
+        //依赖注入Request $request；构造函数注入； 路由和数据模型的绑定； ？？？
     }
+
+
 }

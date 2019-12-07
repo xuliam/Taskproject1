@@ -20,4 +20,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('projects', 'ProjectsController@store')->name('projects.store');
 Route::delete('projects/{mingzi}', 'ProjectsController@destroy')->name('projects.destroy');
 Route::patch('projects/{shide}', 'ProjectsController@update')->name('projects.update');
-Route::get('projects/{project}', 'ProjectsController@show')->name('projects.show');
+Route::get('projects/{ok}', 'ProjectsController@show')->name('projects.show');
+Route::resource('tasks','TasksController');
+Route::post('gaile/suibian/{suibian}', 'TasksController@check')->name('tasks.check');

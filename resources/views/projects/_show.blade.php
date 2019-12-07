@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
-        hello world
+        @include('projects._createForm')
+        @include('projects._list')
     </div>
     @endsection

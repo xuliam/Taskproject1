@@ -52,4 +52,16 @@ class ProjectRepository
     {
         return $this->find($id);
     }
+
+    public function todos($ok)
+    {
+        return $ok->task()->where('completion',0)->get();
+    }
+
+    public function dones($ok)
+    {
+        return $ok->task()->where('completion',1)->get();
+    }
+
+
 }
