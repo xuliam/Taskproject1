@@ -15,6 +15,7 @@
                     <tr>
                         <td>{{$task->name}}</td>
                         <td>@include('tasks._checkForm')</td>
+                        <td>@include('tasks._editModel')</td>
                     </tr>
                     @endforeach
             </table>
