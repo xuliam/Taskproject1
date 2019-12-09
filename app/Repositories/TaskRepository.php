@@ -35,7 +35,14 @@ class TaskRepository
     {
         $task = $this->find($id);
         $task->update([
-            'name'=> $request->name
+            'name'=> $request->name,
+            'project_id' => $request->changeProject
         ]);
+    }
+
+    public function destroy($id)
+    {
+        $task = $this->find($id);
+        $task->delete();
     }
 }

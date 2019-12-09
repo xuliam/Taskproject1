@@ -18,6 +18,11 @@
                 {!! Form::label('name', 'Project Name') !!}
                 {!! Form::text('name', null, ['class' => 'form-control']) !!}
             </div>
+            <div class="modal-body">
+                {!! Form::label('changeProject', 'Project Change') !!}
+                {!! Form::select('changeProject', $tasks , $ok->id , ['class' => 'form-control']) !!}
+            </div>
+
             <div class="modal-footer">
                 {!! Form::submit('Save Edit', ['class' => 'btn btn-primary']) !!}
             </div>

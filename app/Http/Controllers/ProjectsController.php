@@ -39,11 +39,12 @@ class ProjectsController extends Controller
     {
         $todos=$this->repo->todos($ok);
         $dones=$this->repo->dones($ok);
+        $tasks=request()->user()->projects()->pluck('name','id');
        // dd($todos);
 
         //$todos = $this->repo->
          //$mingzi =$this->repo->show($id);
-        return view('projects._show', compact('ok','todos','dones'));
+        return view('projects._show', compact('ok','todos','dones', 'tasks'));
         //依赖注入Request $request；构造函数注入； 路由和数据模型的绑定； ？？？
     }
 

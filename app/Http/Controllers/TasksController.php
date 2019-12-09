@@ -90,7 +90,8 @@ class TasksController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->repo->destroy($id);
+        return back();
     }
 
     public function check($id)
