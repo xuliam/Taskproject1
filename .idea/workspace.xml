@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cc67da3-ff44-4130-b439-83a05028343f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/tasks/_deleteModel.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CreateTask.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/TaskRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/TaskRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tasks/_editModel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tasks/_editModel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_02_050307_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_02_050107_create_projects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_02_050407_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_03_050207_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/_createForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/_createForm.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +184,8 @@
       <workItem from="1575519586198" duration="3415000" />
       <workItem from="1575580538610" duration="11354000" />
       <workItem from="1575707582850" duration="2119000" />
-      <workItem from="1575718962402" duration="10589000" />
+      <workItem from="1575718962402" duration="10827000" />
+      <workItem from="1576180220930" duration="9516000" />
     </task>
     <servers />
   </component>
@@ -222,10 +223,10 @@
     <state x="556" y="367" key="NewPhpFileDialog/0.0.1440.900/-1440.-1069.1440.2560@0.0.1440.900" timestamp="1575359882335" />
     <state x="556" y="348" key="NewPhpFileDialog/0.23.1440.797/-1440.-1046.1440.2537@0.23.1440.797" timestamp="1575855489641" />
     <state x="556" y="348" key="NewPhpFileDialog/0.23.1440.797@0.23.1440.797" timestamp="1575587198777" />
-    <state x="355" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1575580539522">
+    <state x="355" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1576180226126">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="355" y="205" key="com.intellij.ide.util.TipDialog/0.23.1440.797/-1440.-1046.1440.2537@0.23.1440.797" timestamp="1575453795070" />
-    <state x="355" y="205" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1575580539522" />
+    <state x="355" y="205" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1576180226126" />
   </component>
 </project>

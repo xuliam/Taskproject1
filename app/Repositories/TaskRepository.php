@@ -13,7 +13,7 @@ class TaskRepository
        return Task::create([
             'name'=>$request->name,
             'completion'=>(int)false,
-            'project_id'=>$request->project,
+            'project_id'=>$request->projectA,
         ]);
  }
 
